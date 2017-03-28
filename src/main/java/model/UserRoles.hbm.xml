@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.UserRoles" table="user_roles" schema="mydb">
+        <id name="username" column="USERNAME"/>
+        <property name="role" column="ROLE"/>
+    </class>
+</hibernate-mapping>

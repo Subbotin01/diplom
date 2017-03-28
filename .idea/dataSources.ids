@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - mydb@localhost" uuid="41d239f6-a9ec-4cbd-875d-fad258f97f11">
+    <database-info product="MySQL" version="5.7.17-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="mydb"/>
+      <table id="2" parent="1" name="product+"/>
+      <table id="3" parent="1" name="user"/>
+      <table id="4" parent="1" name="user_roles"/>
+      <column id="5" parent="2" name="idPRODUCT+">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="6" parent="2" name="NUMBER">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="7" parent="2" name="NAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="8" parent="2" name="CLIENT">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="9" parent="2" name="PRICE (1)">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="10" parent="2" name="DATE+">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="11" parent="2" name="AMOUNT">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="12" parent="2" name="PRICE (ALL)">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="13" parent="2" name="DISCOUNT">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="14" parent="2" name="STORE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="15" parent="2" name="PRIMARY">
+        <columns>idPRODUCT+</columns>
+        <primary>1</primary>
+      </key>
+      <column id="16" parent="3" name="USERNAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="17" parent="3" name="PASSWORD">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="18" parent="3" name="ENABLED_USER">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="19" parent="3" name="PRIMARY">
+        <columns>USERNAME</columns>
+        <primary>1</primary>
+      </key>
+      <column id="20" parent="4" name="USERNAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="21" parent="4" name="ROLE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="22" parent="4" name="PRIMARY">
+        <columns>USERNAME</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
