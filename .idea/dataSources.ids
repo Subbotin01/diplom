@@ -8,78 +8,86 @@
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
       <schema id="1" name="mydb"/>
-      <table id="2" parent="1" name="product+"/>
-      <table id="3" parent="1" name="user"/>
-      <table id="4" parent="1" name="user_roles"/>
-      <column id="5" parent="2" name="idPRODUCT+">
+      <table id="2" parent="1" name="user"/>
+      <table id="3" parent="1" name="user_roles"/>
+      <table id="4" parent="1" name="product"/>
+      <column id="5" parent="2" name="USERNAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="6" parent="2" name="PASSWORD">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="7" parent="2" name="ENABLED">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <index id="8" parent="2" name="USERNAME">
+        <columns>USERNAME</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="9" parent="2" name="PRIMARY">
+        <columns>USERNAME</columns>
+        <primary>1</primary>
+      </key>
+      <column id="10" parent="3" name="USERNAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="11" parent="3" name="ROLE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="12" parent="3" name="PRIMARY">
+        <columns>USERNAME</columns>
+        <primary>1</primary>
+      </key>
+      <column id="13" parent="4" name="idProduct">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="6" parent="2" name="NUMBER">
+      <column id="14" parent="4" name="Number">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="7" parent="2" name="NAME">
+      <column id="15" parent="4" name="Name">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <column id="8" parent="2" name="CLIENT">
+      <column id="16" parent="4" name="Client">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <column id="9" parent="2" name="PRICE (1)">
+      <column id="17" parent="4" name="Group">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <column id="10" parent="2" name="DATE+">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="11" parent="2" name="AMOUNT">
+      <column id="18" parent="4" name="PriceFirst">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <column id="12" parent="2" name="PRICE (ALL)">
+      <column id="19" parent="4" name="Date">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <column id="13" parent="2" name="DISCOUNT">
+      <column id="20" parent="4" name="Amount">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <column id="14" parent="2" name="STORE">
+      <column id="21" parent="4" name="PriceA">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <key id="15" parent="2" name="PRIMARY">
-        <columns>idPRODUCT+</columns>
-        <primary>1</primary>
-      </key>
-      <column id="16" parent="3" name="USERNAME">
+      <column id="22" parent="4" name="Discount">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <column id="17" parent="3" name="PASSWORD">
-        <data-type>varchar(45)</data-type>
-      </column>
-      <column id="18" parent="3" name="ENABLED_USER">
-        <data-type>varchar(45)</data-type>
-      </column>
-      <key id="19" parent="3" name="PRIMARY">
-        <columns>USERNAME</columns>
-        <primary>1</primary>
-      </key>
-      <column id="20" parent="4" name="USERNAME">
+      <column id="23" parent="4" name="Store">
         <mandatory>1</mandatory>
         <data-type>varchar(45)</data-type>
       </column>
-      <column id="21" parent="4" name="ROLE">
-        <mandatory>1</mandatory>
-        <data-type>varchar(45)</data-type>
-      </column>
-      <key id="22" parent="4" name="PRIMARY">
-        <columns>USERNAME</columns>
+      <key id="24" parent="4" name="PRIMARY">
+        <columns>idProduct</columns>
         <primary>1</primary>
       </key>
     </database-model>

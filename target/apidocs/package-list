@@ -1,0 +1,5 @@
+com.websystique.springsecurity.configuration
+com.websystique.springsecurity.controller
+com.websystique.springsecurity.dao
+com.websystique.springsecurity.model
+com.websystique.springsecurity.service

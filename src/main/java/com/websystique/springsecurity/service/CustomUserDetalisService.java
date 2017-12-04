@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 
-@Service("userDetailsService")
+@Service("userDetailsService") // , объявляем что этот класс представляет собой сервис
 public class CustomUserDetalisService implements UserDetailsService {
 
     //get user from the database, via Hibernate
@@ -29,10 +29,10 @@ public class CustomUserDetalisService implements UserDetailsService {
 
     @Transactional(readOnly=true)
     @Override
-    public UserDetails loadUserByUsername(final String usernme)
+    public UserDetails loadUserByUsername(final String username)
             throws UsernameNotFoundException {
 
-        com.websystique.springsecurity.model.User user = userService.findByUserName(usernme);
+        com.websystique.springsecurity.model.User user = userService.findByUserName(username);
         List<GrantedAuthority> authorities =
                 buildUserAuthority(user.getUserRole());
 

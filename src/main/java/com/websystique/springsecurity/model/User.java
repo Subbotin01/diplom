@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
+@Entity //Эта аннотация указывает Hibernate, что данный класс является сущностью
 @Table(name = "user", catalog = "mydb")
 public class User {
 
